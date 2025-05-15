@@ -1,6 +1,14 @@
 local collision = {
     IdList = {}  
 }
+     function collision.RemoveId(isGroup,IDIDID)
+        if isGroup == true then
+            table.remove(collision.GroupList,IDIDID)
+
+        else
+            table.remove(IdList,IDIDID)
+        end
+    end
     function collision.CreateGroup(id, idList)
     collision.GroupList[id] = idList
     end
